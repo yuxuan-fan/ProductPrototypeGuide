@@ -4,6 +4,8 @@
 
 This repository is a documentation-first specification for AI-generated interactive product prototypes; it has no application source tree. `SKILL.md` holds cross-end rules: core principles, workflow, page states, shared component rules, interaction flow, the acceptance checklist, and pointers to the end references. End-specific rules live under `references/`: `b-end.md` (desktop web / SaaS) and `c-end.md` (mobile, tablet, mini programs, apps), while `design-tokens.md` defines default colors, typography, spacing, and visual treatments shared by all ends. `README.md` explains the repository and how to invoke the specification. Keep every rule in exactly one place: end-specific rules in the matching reference, cross-end rules in `SKILL.md`, and pointers instead of restatements elsewhere. Do not add implementation code.
 
+Delivery also supports editable design drafts. `SKILL.md` selects the delivery mode independently of the target end; `references/design-delivery.md` holds jsDesign MCP procedures, editable-layer requirements, preview checks, and design-draft handoff. End-reference engineering requirements apply only to runnable prototypes.
+
 ## Build, Test, and Development Commands
 
 There is no build system, package manifest, or automated test command in this repository. Edit the Markdown sources directly and inspect the rendered documents in a Markdown preview. For changes affecting prototype requirements, check that the workflow, design tokens, acceptance checklist, and the matching end reference agree. When reviewing a generated prototype, open it in a browser and exercise its interactions and required empty, loading, success, and failure states.
@@ -14,7 +16,7 @@ Use Markdown headings and concise, actionable bullets. Keep the user-facing spec
 
 ## Validation Guidelines
 
-Before submitting documentation changes, review the rendered Markdown, verify relative file references, and check for contradictory or duplicated requirements. For prototype-spec changes, walk through the applicable items in the acceptance checklist in `SKILL.md`; no test framework or coverage target is configured here.
+Before submitting documentation changes, review the rendered Markdown, verify relative file references, and check for contradictory or duplicated requirements. For specification changes, walk through the applicable items in the acceptance checklist in `SKILL.md` and the selected delivery reference. Design-draft validation uses layer inspection and exported previews; it does not imply browser interaction works. No test framework or coverage target is configured here.
 
 ## Commit & Pull Request Guidelines
 
